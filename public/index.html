@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="robots" content="none">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Управление временем</title>
+  </head>
+  <body> 
+    <main class="main">
+      <div class="container tab tab--2 active grid">
+        <h2> Ваш бюджет</h2>
+        <section class="section--budget-info">     
+          <button class="button active">в день</button>
+          <button class="button">в месяц</button>
+          <button class="button">в год</button>
+          <div class="infos"> 
+            <p>вы можете тратить 389 рублей</p>
+          </div>
+          <div class="budget-fast-info">
+            <canvas></canvas>
+            <ul class="budget-fast__list">
+              <li class="budget-fast__item flex">
+                <h6>Ваш доход </h6>
+                <p>49 600 </p>
+              </li>
+              <li class="budget-fast__item flex">
+                <h6>Ваш расход </h6>
+                <p>30 565 </p>
+              </li>
+              <li class="budget-fast__item flex">
+                <h6>Остаток </h6>
+                <p>19 035 </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section-finance section--expenses">
+          <div class="flex">
+            <h3>Постоянные расходы</h3>
+            <button class="button--add">добавить</button>
+          </div>
+          <ul class="finance__list flex">
+            <li class="finance-unit flex">
+              <h6>Дом</h6>
+              <div class="finance-unit__icon flex">
+                    <svg class="icon icon-home ">
+                      <use xlink:href="#icon-home"></use>
+                    </svg>
+              </div>
+              <p>22 000</p>
+            </li>
+            <li class="finance-unit flex">
+              <h6>Коммунальные</h6>
+              <div class="finance-unit__icon flex">
+                    <svg class="icon icon-shopping-cart ">
+                      <use xlink:href="#icon-shopping-cart"></use>
+                    </svg>
+              </div>
+              <p>5 000</p>
+            </li>
+            <li class="finance-unit flex">
+              <h6>Интернет</h6>
+              <div class="finance-unit__icon flex">
+                    <svg class="icon icon-theater-masks ">
+                      <use xlink:href="#icon-theater-masks"></use>
+                    </svg>
+              </div>
+              <p>565</p>
+            </li>
+            <li class="finance-unit flex">
+              <h6>Здоровье</h6>
+              <div class="finance-unit__icon flex">
+                    <svg class="icon icon-bus ">
+                      <use xlink:href="#icon-bus"></use>
+                    </svg>
+              </div>
+              <p>3 000</p>
+            </li>
+            <li class="finance-unit flex">
+              <h6>Услуги</h6>
+              <div class="finance-unit__icon flex">
+                    <svg class="icon icon-conversation ">
+                      <use xlink:href="#icon-conversation"></use>
+                    </svg>
+              </div>
+              <p>0</p>
+            </li>
+          </ul>
+        </section>
+        <section class="section-finance section--revenue">
+          <div class="flex">
+            <h3>Постоянные доходы</h3>
+            <button class="button--add">добавить</button>
+          </div>
+          <ul class="finance__list flex">
+            <li class="finance-unit flex">
+              <h6>Зарплата</h6>
+              <div class="finance-unit__icon flex">
+                    <svg class="icon icon-calendar ">
+                      <use xlink:href="#icon-calendar"></use>
+                    </svg>
+              </div>
+              <p>49 600</p>
+            </li>
+          </ul>
+        </section>
+        <section class="section--notify">
+          <ul class="notify__list">
+            <li class="notify__item notify--revenue">
+              <h4> <span>вчера, </span>28 февраля</h4>
+              <div class="notify-container flex">
+                <p>Зарплата</p>
+                <p>+25 000</p>
+              </div>
+            </li>
+            <li class="notify__item notify--expense">
+              <h4> <span>среда, </span>27 февраля</h4>
+              <div class="notify-container flex">
+                <p>Продукты</p>
+                <p>-435</p>
+              </div>
+            </li>
+            <li class="notify__item notify--expense">
+              <h4> <span>пятница, </span>8 февраля</h4>
+              <div class="notify-container flex">
+                <p>Долг</p>
+                <p>-10 000</p>
+              </div>
+            </li>
+            <li class="notify__item notify--expense">
+              <h4> <span>четверг, </span>7 февраля</h4>
+              <div class="notify-container flex">
+                <p>Услуги</p>
+                <p>-2 435</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <form class="form-finance flex" method="post">
+          <input class="form-finance__input input--date" type="date" name="date" placeholder="когда">
+          <input class="form-finance__input input--text" type="text" name="where" placeholder="Напишите на что">
+          <input class="form-finance__input input--number" type="number" name="sum" placeholder="Введите сумму">
+        </form>
+      </div>
+      <div class="container tab tab--3">
+        <h2>Задачи</h2>
+      </div>
+      <div class="container tab tab--4">
+        <h2>Привычки</h2>
+      </div>
+      <div class="container tab tab--5">
+        <h2>Цели</h2>
+      </div>
+      <div class="container tab tab--5">
+        <h2>Цели</h2>
+      </div>
+      <aside class="aside">
+        <nav class="aside__nav">
+          <ul class="nav__list">
+            <li class="list__item"><span>Планнер</span></li>
+            <li class="list__item active"><span>Финансы</span></li>
+            <li class="list__item"><span>Задачи</span></li>
+            <li class="list__item"><span>Привычки</span></li>
+            <li class="list__item"><span>Цели</span></li>
+          </ul>
+        </nav>
+      </aside>
+      <script src="js/lib.min.js"></script>
+    </main>
+  </body>
+</html>
